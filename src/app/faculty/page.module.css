@@ -1,0 +1,62 @@
+.facultyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.facultyCard {
+  background: var(--bg-white);
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 5px solid var(--accent-amber);
+  transition: all var(--transition-normal);
+}
+
+.facultyCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.facultyAvatar {
+  width: 120px;
+  height: 120px;
+  background: var(--bg-main);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--primary-blue);
+  border: 4px solid var(--accent-amber);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.facultyCard:hover .facultyAvatar {
+  transform: scale(1.1);
+  background: var(--primary-blue);
+  color: var(--text-white);
+}
+
+.facultyName {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.roleBadge {
+  display: inline-block;
+  background-color: rgba(15, 23, 42, 0.05);
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+}
+
+.facultyDesc {
+  color: var(--text-body);
+  font-size: 0.95rem;
+}

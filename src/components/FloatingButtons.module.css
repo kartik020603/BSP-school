@@ -1,0 +1,41 @@
+.floatingContainer {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floatBtn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-fast);
+}
+
+.floatBtn:hover {
+  transform: scale(1.1);
+}
+
+.callBtn {
+  background-color: var(--accent-amber);
+}
+
+.callBtn:hover {
+  background-color: var(--accent-amber-hover);
+}
+
+.whatsappBtn {
+  background-color: #25d366;
+}
+
+.whatsappBtn:hover {
+  background-color: #128C7E;
+}
