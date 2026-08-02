@@ -65,7 +65,6 @@ export default function Home() {
             priority={index === 0}
           />
         ))}
-        <div className={styles.heroOverlay}></div>
 
         {/* Slider Controls */}
         <button className={styles.sliderBtnLeft} onClick={prevHero} aria-label="Previous slide">
@@ -74,40 +73,45 @@ export default function Home() {
         <button className={styles.sliderBtnRight} onClick={nextHero} aria-label="Next slide">
           <ChevronRight size={30} />
         </button>
+      </section>
 
-        <div className={styles.heroContent}>
-          <motion.h2 
-            className={styles.heroTitle}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Welcome to <br />
-            <span className={styles.heroHighlight}>B.S.P. ITI College</span>
-          </motion.h2>
-          
-          <motion.p 
-            className={styles.heroSubtitle}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            बनाइए अपना भविष्य (Build Your Future) - Skill Today, Success Tomorrow.
-          </motion.p>
-          
-          <motion.div 
-            className={styles.heroButtons}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Link href="/admissions" className={`${styles.btn} ${styles.btnPrimary}`}>
-              Admissions Open
-            </Link>
-            <a href="tel:+919012555404" className={`${styles.btn} ${styles.btnSecondary}`}>
-              <Phone size={18} /> Call: 9012555404
-            </a>
-          </motion.div>
+      {/* Hero Text Section */}
+      <section className={styles.heroTextSection}>
+        <div className="container">
+          <div className={styles.heroContent}>
+            <motion.h2 
+              className={styles.heroTitle}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Welcome to <br />
+              <span className={styles.heroHighlight}>B.S.P. ITI College</span>
+            </motion.h2>
+            
+            <motion.p 
+              className={styles.heroSubtitle}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              बनाइए अपना भविष्य (Build Your Future) - Skill Today, Success Tomorrow.
+            </motion.p>
+            
+            <motion.div 
+              className={styles.heroButtons}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Link href="/admissions" className={`${styles.btn} ${styles.btnPrimary}`}>
+                Admissions Open
+              </Link>
+              <a href="tel:+919012555404" className={`${styles.btn} ${styles.btnSecondary}`}>
+                <Phone size={18} /> Call: 9012555404
+              </a>
+            </motion.div>
+          </div>
         </div>
       </section>
 
