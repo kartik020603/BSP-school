@@ -5,12 +5,24 @@
 /* Hero Section */
 .hero {
   position: relative;
-  height: 60vh;
-  min-height: 400px;
+  height: 85vh;
+  min-height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  color: var(--text-white);
   overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.5));
+  z-index: 2;
 }
 
 .sliderBtnLeft, .sliderBtnRight {
@@ -45,40 +57,28 @@
   right: 20px;
 }
 
+/* Hero Text Section */
 .heroTextSection {
   background-color: var(--primary-blue);
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-  text-align: center;
   color: var(--text-white);
 }
 
-.heroContent {
-  max-width: 800px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-.heroTitle {
+.heroTextTitle {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-}
-
-.heroHighlight {
   color: var(--accent-amber);
 }
 
-.heroSubtitle {
+.heroTextSubtitle {
   font-size: 1.25rem;
   margin-bottom: 40px;
   font-weight: 300;
   color: #cbd5e1;
 }
 
-.heroButtons {
+.heroTextButtons {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -280,10 +280,10 @@
 }
 
 @media (min-width: 768px) {
-  .heroTitle {
+  .heroTextTitle {
     font-size: 4rem;
   }
-  .heroSubtitle {
+  .heroTextSubtitle {
     font-size: 1.5rem;
   }
   .tabContent {
