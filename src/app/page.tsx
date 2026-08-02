@@ -65,7 +65,6 @@ export default function Home() {
             priority={index === 0}
           />
         ))}
-        <div className={styles.heroOverlay}></div>
 
         {/* Slider Controls */}
         <button className={styles.sliderBtnLeft} onClick={prevHero} aria-label="Previous slide">
