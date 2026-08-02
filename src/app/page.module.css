@@ -25,6 +25,38 @@
   z-index: 2;
 }
 
+.sliderBtnLeft, .sliderBtnRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(4px);
+}
+
+.sliderBtnLeft:hover, .sliderBtnRight:hover {
+  background: var(--accent-amber);
+  color: var(--primary-blue);
+}
+
+.sliderBtnLeft {
+  left: 20px;
+}
+
+.sliderBtnRight {
+  right: 20px;
+}
+
 .heroContent {
   position: relative;
   z-index: 3;
@@ -169,6 +201,87 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 30px;
+}
+
+/* Vision and Goals Section */
+.visionGoalsSection {
+  background-color: var(--bg-white);
+}
+
+.tabContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-white);
+  border-radius: 15px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.tabButtons {
+  display: flex;
+  border-bottom: 2px solid var(--bg-main);
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  background: var(--bg-main);
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tabBtn:hover {
+  background: var(--bg-white);
+  color: var(--primary-blue);
+}
+
+.tabBtn.activeTab {
+  background: var(--bg-white);
+  color: var(--primary-blue);
+  border-bottom: 3px solid var(--accent-amber);
+}
+
+.tabContent {
+  padding: 40px;
+  min-height: 250px;
+}
+
+.tabPane h3 {
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.tabPane p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.goalsList {
+  list-style: none;
+  padding: 0;
+}
+
+.goalsList li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.goalsList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-amber);
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {
