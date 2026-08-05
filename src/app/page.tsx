@@ -19,11 +19,11 @@ export default function Home() {
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const timer = setTimeout(() => {
       setCurrentHero((prev) => (prev + 1) % heroImages.length);
     }, 5000);
-    return () => clearInterval(timer);
-  }, [heroImages.length]);
+    return () => clearTimeout(timer);
+  }, [currentHero, heroImages.length]);
 
   const nextHero = () => setCurrentHero((prev) => (prev + 1) % heroImages.length);
   const prevHero = () => setCurrentHero((prev) => (prev - 1 + heroImages.length) % heroImages.length);
