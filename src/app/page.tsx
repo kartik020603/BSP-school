@@ -269,6 +269,8 @@ export default function Home() {
               { src: "/images/iti_computer_lab.png", title: "Modern Computer Lab" },
               { src: "/images/iti_workshop.png", title: "Lathe Machine Practical" },
               { src: "/images/iti_electrician.png", title: "Electrician Trade Practical" },
+              { src: "/images/iti_fitter.png", title: "Fitter Trade Practical" },
+              { src: "/images/iti_library.png", title: "Campus Library & Study Area" },
               { src: "/images/iti_event.png", title: "College Events & Celebrations" }
             ].map((img, idx) => (
               <motion.div 
