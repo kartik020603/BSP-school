@@ -282,3 +282,130 @@
     padding: 40px;
   }
 }
+
+/* Facilities Section */
+.facilitiesSection {
+  background-color: var(--bg-white);
+}
+
+.facilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.facilityCard {
+  background: var(--bg-main);
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.facilityCard:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-amber);
+}
+
+.facilityIcon {
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 54, 93, 0.1);
+  padding: 18px;
+  border-radius: 50%;
+}
+
+.facilityCard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.facilityCard p {
+  color: var(--text-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Gallery Section */
+.gallerySection {
+  background-color: var(--bg-main);
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.galleryItem {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: #fff;
+}
+
+.galleryImgWrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.galleryOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 30px 15px 15px;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.galleryImgWrapper:hover .galleryOverlay {
+  opacity: 1;
+}
+
+/* Recruiters Section */
+.recruitersSection {
+  background-color: var(--bg-white);
+  overflow: hidden;
+}
+
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+
+.marqueeContent {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+}
+
+.recruiterBox {
+  background: var(--bg-main);
+  padding: 20px 40px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+}
+

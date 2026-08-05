@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { GraduationCap, Settings, Briefcase, Phone, ChevronLeft, ChevronRight } from "lucide-react";
+import { GraduationCap, Settings, Briefcase, Phone, ChevronLeft, ChevronRight, Monitor, Wrench, BookOpen, Trophy } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./page.module.css";
 import Image from "next/image";
@@ -209,6 +209,118 @@ export default function Home() {
                 )}
               </AnimatePresence>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Facilities Section */}
+      <section className={`section-padding ${styles.facilitiesSection}`}>
+        <div className="container">
+          <motion.div 
+            className="section-title"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2>Our <span>Campus Facilities</span></h2>
+            <p>आधुनिक सुविधाएं (Modern Infrastructure)</p>
+          </motion.div>
+
+          <div className={styles.facilitiesGrid}>
+            {[
+              { icon: <Monitor size={30} />, title: "Computer Lab", desc: "High-tech computer lab with internet connectivity." },
+              { icon: <Wrench size={30} />, title: "Modern Workshops", desc: "Fully equipped workshops for practical training." },
+              { icon: <BookOpen size={30} />, title: "Library", desc: "Vast collection of technical books and journals." },
+              { icon: <Trophy size={30} />, title: "Sports & Events", desc: "Promoting physical fitness and extracurricular activities." }
+            ].map((facility, idx) => (
+              <motion.div 
+                key={idx} 
+                className={styles.facilityCard}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                whileHover={{ translateY: -10 }}
+              >
+                <div className={styles.facilityIcon}>{facility.icon}</div>
+                <h3>{facility.title}</h3>
+                <p>{facility.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section className={`section-padding ${styles.gallerySection}`}>
+        <div className="container">
+          <motion.div 
+            className="section-title"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2>Life at <span>B.S.P. ITI</span></h2>
+            <p>Training & Event Gallery</p>
+          </motion.div>
+
+          <div className={styles.galleryGrid}>
+            {[
+              { src: "/images/iti_computer_lab.png", title: "Modern Computer Lab" },
+              { src: "/images/iti_workshop.png", title: "Lathe Machine Practical" },
+              { src: "/images/iti_electrician.png", title: "Electrician Trade Practical" },
+              { src: "/images/iti_event.png", title: "College Events & Celebrations" }
+            ].map((img, idx) => (
+              <motion.div 
+                key={idx} 
+                className={styles.galleryItem}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <div className={styles.galleryImgWrapper}>
+                  <Image src={img.src} alt={img.title} fill style={{ objectFit: 'cover' }} />
+                  <div className={styles.galleryOverlay}>
+                    <span>{img.title}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Recruiters / Placement Partners Section */}
+      <section className={`section-padding ${styles.recruitersSection}`}>
+        <div className="container">
+          <motion.div 
+            className="section-title"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2>Our <span>Placement Partners</span></h2>
+            <p>Top recruiters where our students get placed</p>
+          </motion.div>
+          
+          <div className={styles.marqueeContainer}>
+            <motion.div 
+              className={styles.marqueeContent}
+              animate={{ x: [0, -1500] }}
+              transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+            >
+              {["Tata Motors", "Maruti Suzuki", "Hero MotoCorp", "L&T", "Honda", "Mahindra", "Wipro", "Jindal Steel"].map((company, idx) => (
+                <div key={idx} className={styles.recruiterBox}>
+                  {company}
+                </div>
+              ))}
+              {["Tata Motors", "Maruti Suzuki", "Hero MotoCorp", "L&T", "Honda", "Mahindra", "Wipro", "Jindal Steel"].map((company, idx) => (
+                <div key={`dup-${idx}`} className={styles.recruiterBox}>
+                  {company}
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>
