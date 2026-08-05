@@ -65,10 +65,15 @@ export default function Contact() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6 }}
           >
-             <div style={{ textAlign: "center" }}>
-               <MapPin size={48} color="var(--primary-blue)" style={{ marginBottom: "15px", opacity: 0.5 }} />
-               <p>Google Maps Embed would go here<br/>(Kanjaulighat, Mathura)</p>
-             </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3544.737304538029!2d77.84429257528647!3d27.32140887640596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397381006a3ae7d1%3A0x65fa4c7600182974!2sB.S.P%20iti%20college%20Kanjauli%20Ghat%20Mathura!5e0!3m2!1sen!2sin!4v1785929218412!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </motion.div>
         </div>
       </div>
