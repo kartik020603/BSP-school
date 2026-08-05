@@ -409,3 +409,26 @@
   min-width: 200px;
 }
 
+/* Map Section */
+.mapSection {
+  background-color: var(--bg-main);
+  text-align: center;
+}
+
+.mapContainer {
+  margin-top: 40px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 5px solid var(--bg-white);
+  line-height: 0;
+}
+
+.mapContainer iframe {
+  width: 100%;
+  height: 450px;
+  display: block;
+  border: none;
+}
+
+

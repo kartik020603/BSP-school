@@ -327,6 +327,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Location Map Section */}
+      <section className={`section-padding ${styles.mapSection}`}>
+        <div className="container">
+          <motion.div 
+            className="section-title"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2>Our <span>Location</span></h2>
+            <p>Visit our campus in Mathura</p>
+          </motion.div>
+          <motion.div 
+            className={styles.mapContainer}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3544.737304538029!2d77.84429257528647!3d27.32140887640596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397381006a3ae7d1%3A0x65fa4c7600182974!2sB.S.P%20iti%20college%20Kanjauli%20Ghat%20Mathura!5e0!3m2!1sen!2sin!4v1785929218412!5m2!1sen!2sin" 
+              width="100%" 
+              height="450" 
+              style={{ border: 0 }} 
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Call to Action Banner */}
       <section className={`section-padding ${styles.ctaSection}`}>
         <div className={`container ${styles.ctaContent}`}>
